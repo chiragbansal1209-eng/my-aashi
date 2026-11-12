@@ -1,0 +1,260 @@
+
+.birthday-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(
+    145deg,
+    #fff0f3,
+    #f4d1db,
+    #fff5f6
+  );
+  overflow: hidden;
+}
+
+.birthday-heading > span {
+  color: #b51238;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.birthday-heading h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+  font-weight: 400;
+  color: #650d25;
+  margin: 12px 0;
+}
+
+.birthday-heading p {
+  color: #75404e;
+  margin-bottom: 35px;
+}
+
+.birthday-card {
+  max-width: 550px;
+  min-height: 570px;
+  margin: auto;
+  background: linear-gradient(
+    145deg,
+    #650d25,
+    #3b0714
+  );
+  padding: 12px;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px #650d2540;
+  position: relative;
+}
+
+.card-front,
+.card-inside {
+  min-height: 546px;
+  padding: 40px 30px;
+  border: 1px solid #dba0b0;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    #fff8fa,
+    #f8dce4
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: birthdayAppear .6s ease;
+}
+
+.card-decoration {
+  font-size: 55px;
+  color: #c01643;
+  margin-bottom: 15px;
+}
+
+.birthday-tag,
+.inside-tag {
+  color: #a51a3c;
+  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.card-front h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 115px;
+  color: #650d25;
+  font-weight: 400;
+  margin: 10px 0 -15px;
+}
+
+.card-front h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+  font-weight: 400;
+  color: #c01643;
+  margin: 0;
+}
+
+.birthday-divider {
+  color: #c01643;
+  letter-spacing: 10px;
+  margin: 20px 0;
+}
+
+.card-front p {
+  color: #75404e;
+  line-height: 1.7;
+  max-width: 300px;
+}
+
+.gift-icon {
+  font-size: 65px;
+  margin: 12px 0;
+  animation: giftBounce 2s infinite;
+}
+
+.birthday-open-btn {
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #d9274f,
+    #8b102e,
+    #4b0719
+  );
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px #8b102e35;
+  transition: .3s ease;
+  margin-top: 15px;
+}
+
+.birthday-open-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px #8b102e55;
+}
+
+.card-bottom {
+  font-family: 'Great Vibes', cursive;
+  color: #a51a3c;
+  font-size: 23px;
+  margin-top: 22px;
+}
+
+/* INSIDE CARD */
+
+.card-inside {
+  padding: 35px 28px;
+}
+
+.birthday-sparkle {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.card-inside h1 {
+  font-family: 'Great Vibes', cursive;
+  color: #8b102e;
+  font-size: 55px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.inside-date {
+  color: #c01643;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.birthday-cake {
+  font-size: 55px;
+  margin: 15px 0;
+}
+
+.birthday-message {
+  color: #653444;
+  line-height: 1.8;
+  font-size: 13px;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+.birthday-signature {
+  font-family: 'Great Vibes', cursive;
+  color: #a51a3c;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 20px 0 5px;
+}
+
+.birthday-footer {
+  color: #8b102e;
+  margin-top: 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.birthday-footer span {
+  color: #d9274f;
+  margin: 0 10px;
+}
+
+@keyframes birthdayAppear {
+  from {
+    opacity: 0;
+    transform: scale(.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes giftBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .birthday-section {
+    padding: 65px 15px;
+  }
+
+  .birthday-heading h2 {
+    font-size: 52px;
+  }
+
+  .birthday-card {
+    min-height: 0;
+  }
+
+  .card-front,
+  .card-inside {
+    min-height: 520px;
+    padding: 30px 17px;
+  }
+
+  .card-front h1 {
+    font-size: 95px;
+  }
+
+  .card-front h2 {
+    font-size: 55px;
+  }
+
+  .card-inside h1 {
+    font-size: 43px;
+  }
+
+  .birthday-message {
+    font-size: 12px;
+  }
+}

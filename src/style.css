@@ -1,0 +1,1226 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #4c101e;
+  background: #fff8f6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.site {
+  overflow: hidden;
+  background: #fff8f6;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  min-height: 76px;
+  padding: 0 clamp(20px, 4.5vw, 68px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,249,247,.96);
+  border-bottom: 1px solid #f4d5d9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #4b0b19;
+  white-space: nowrap;
+}
+
+.brand-hearts {
+  position: relative;
+  width: 65px;
+  height: 42px;
+  color: #e31b50;
+}
+
+.brand-hearts svg {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  stroke-width: 1.8;
+}
+
+.brand-hearts svg:first-child {
+  left: 0;
+  transform: rotate(-15deg);
+}
+
+.brand-hearts svg:last-child {
+  left: 25px;
+  transform: rotate(12deg);
+}
+
+.brand-heart {
+  font-family: Arial;
+  color: #e3184d;
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 24px);
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #4e1520;
+  transition: .2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d91c4d;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #e22b59;
+  padding-bottom: 8px;
+}
+
+.nav-heart {
+  color: #e21e50 !important;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: none;
+  color: #a30e38;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  min-height: 580px;
+  padding: 70px clamp(24px, 7vw, 105px) 62px;
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: center;
+  gap: 35px;
+  background: radial-gradient(
+    ellipse at 20% 35%,
+    #fff 0,
+    #fff1f1 48%,
+    #ffe5e9 100%
+  );
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.eyebrow,
+.tiny-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b24c63;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(70px, 9vw, 126px);
+  line-height: 1;
+  margin: 18px 0 4px;
+  color: #4a0d1c;
+  white-space: nowrap;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #e11d4f;
+}
+
+.big-heart {
+  font-family: Arial;
+  color: #e51e50;
+  font-size: .7em;
+  margin-left: 8px;
+}
+
+.hero h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 42px);
+  margin: 14px 0 0;
+}
+
+.scribble {
+  color: #e21e50;
+  font-size: 25px;
+  margin: 8px 0 15px;
+}
+
+.hero-copy > p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #57242d;
+}
+
+.hero-copy > p span {
+  color: #e21e50;
+}
+
+.primary-btn {
+  margin: 22px auto 0;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 27px;
+  background: linear-gradient(135deg, #ed2858, #bd0e3b);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  box-shadow: 0 8px 18px #d51b4a2a;
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px #d51b4a40;
+}
+
+.hero-note {
+  margin-top: 24px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;
+  color: #a74c61;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  max-width: 470px;
+  margin: auto;
+  transform: rotate(2deg);
+}
+
+.photo-frame {
+  padding: 12px 12px 35px;
+  background: #fff;
+  box-shadow: 0 16px 38px #7e2d3a25;
+  border: 1px solid #f3d9d8;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 410px;
+  display: block;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 2px;
+}
+
+.tape {
+  position: absolute;
+  top: -16px;
+  left: 36%;
+  width: 95px;
+  height: 29px;
+  background: #f5a8bdba;
+  transform: rotate(-8deg);
+  z-index: 2;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 8px;
+  right: 24px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 19px;
+  color: #7b3541;
+}
+
+.doodle {
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  color: #7d263c;
+  font-size: 35px;
+}
+
+.rose-decoration {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  font-size: 100px;
+  filter: drop-shadow(0 5px 6px #b34b4b20);
+}
+
+.floating-heart {
+  position: absolute;
+  color: #f05a7d;
+  filter: drop-shadow(0 4px 8px #e44a6b40);
+  font-size: 32px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.heart-a {
+  right: 2%;
+  top: 14%;
+}
+
+.heart-b {
+  right: 1%;
+  bottom: 10%;
+  font-size: 45px;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
+/* COMMON SECTIONS */
+
+.section {
+  padding: 60px clamp(20px, 6vw, 90px);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #e42a59;
+}
+
+.section-heading > span {
+  width: min(12vw, 125px);
+  height: 1px;
+  background: #ed6b8c;
+}
+
+.section-heading h2,
+.you-me h3 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(48px, 6vw, 76px);
+  color: #7b102c;
+  margin: 0;
+}
+
+/* JOURNEY */
+
+.journey {
+  background: #fff9f6;
+  text-align: center;
+}
+
+.journey-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 45px auto 0;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  gap: 12px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 38px;
+  left: 16%;
+  right: 16%;
+  height: 2px;
+  background: #f5a0b7;
+}
+
+.milestone {
+  position: relative;
+  z-index: 1;
+}
+
+.milestone-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #ffd9e2;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+  color: #9b1538;
+}
+
+.milestone-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.6;
+}
+
+.milestone h3 {
+  font-size: 19px;
+  margin: 6px 0;
+  color: #691326;
+}
+
+.milestone h4 {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.milestone p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 8px 0;
+  color: #6c454b;
+}
+
+.you-me {
+  border-left: 1px solid #ed7190;
+  padding-left: 28px;
+}
+
+.you-me h3 {
+  font-size: 56px;
+}
+
+.love-line {
+  font-family: 'Great Vibes', cursive;
+  font-size: 27px;
+  color: #e32354;
+}
+
+.you-me p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+}
+
+.you-me p span {
+  color: #e32354;
+}
+
+/* PROMISE SECTION */
+
+.promises {
+  background: #fff1f4;
+  text-align: center;
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+
+.promise-subtitle {
+  color: #98717c;
+  line-height: 1.8;
+  margin: 20px auto 35px;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1250px;
+  margin: 40px auto 0;
+}
+
+.promise-card {
+  border: 1px solid #f3d5dc;
+  background: white;
+  border-radius: 18px;
+  padding: 28px 15px;
+  cursor: pointer;
+  color: #704653;
+  transition: .3s ease;
+  min-height: 230px;
+}
+
+.promise-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 12px 30px #e8aab744;
+  background: #fffafb;
+  border-color: #e9a0b4;
+}
+
+.promise-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.promise-card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.promise-card p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.promise-card span {
+  display: inline-block;
+  margin-top: 15px;
+  color: #c56c83;
+  font-size: 12px;
+}
+
+/* PROMISE POPUP */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(50, 20, 35, 0.68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+  animation: fadeIn .3s ease;
+}
+
+.promise-popup {
+  position: relative;
+  background: #fff8fa;
+  max-width: 440px;
+  width: 100%;
+  padding: 45px 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 60px #0003;
+  animation: popupIn .35s ease;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: #f9e5eb;
+  color: #a34e69;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  background: #f3d0db;
+}
+
+.popup-emoji {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.promise-popup h2 {
+  color: #a34e69;
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.promise-note {
+  color: #80616b;
+  line-height: 1.9;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.popup-signature {
+  color: #c56c83;
+  font-family: 'Great Vibes', cursive;
+  font-size: 26px;
+  margin: 20px 0;
+}
+
+.popup-button {
+  margin-top: 20px;
+}
+
+/* MEMORIES */
+
+.memories {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background: linear-gradient(
+    145deg,
+    #ffd8e2,
+    #fff0f2 60%,
+    #ffd4df
+  );
+  overflow: hidden;
+  border-radius: 5% 5% 0 0;
+}
+
+.memory-copy {
+  padding-left: clamp(0px, 4vw, 55px);
+  z-index: 1;
+}
+
+.memory-copy h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(52px, 6.7vw, 84px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #8e1235;
+  margin: 16px 0;
+}
+
+.memory-copy h2 span {
+  color: #e51e50;
+}
+
+.underline {
+  height: 2px;
+  width: 220px;
+  background: #a82045;
+  transform: rotate(-5deg);
+  margin: 25px 0;
+}
+
+.memory-copy > p {
+  max-width: 430px;
+  line-height: 1.7;
+  color: #6a303e;
+}
+
+.text-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #b5133c;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.heart-photo {
+  width: min(100%, 430px);
+  aspect-ratio: 1.08;
+  justify-self: center;
+  clip-path: path(
+    'M 210 390 C 190 370 20 250 20 130 C 20 35 130 0 210 85 C 290 0 400 35 400 130 C 400 250 230 370 210 390 Z'
+  );
+  background: #fff;
+  padding: 9px;
+  filter: drop-shadow(0 12px 18px #8e183a30);
+}
+
+.heart-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+}
+
+.memory-heart {
+  left: 5%;
+  top: 25%;
+  font-size: 28px;
+}
+
+.memory-heart-two {
+  right: 5%;
+  bottom: 18%;
+  font-size: 35px;
+}
+
+/* ROMANTIC DARE */
+
+.dare-section {
+  background: #fff9f6;
+  text-align: center;
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+
+.dare-subtitle {
+  color: #98717c;
+  line-height: 1.8;
+  margin: 20px auto 35px;
+}
+
+.dare-card {
+  max-width: 520px;
+  margin: 35px auto 0;
+  padding: 35px;
+  background: linear-gradient(145deg, #fff0f4, #fff9fa);
+  border: 1px solid #f2d3dc;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px #d99aaa22
+}
+
+
+
+/* JOURNEY INTERACTIVE TIMELINE */
+
+.journey-subtitle {
+  color: #95616E;
+  line-height: 1.8;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.timeline {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 35px 18px;
+  row-gap: 45px;
+}
+
+.milestone {
+  cursor: pointer;
+  padding: 12px 8px;
+  border-radius: 18px;
+  transition: .3s ease;
+}
+
+.milestone:hover {
+  background: #FFE8ED;
+  transform: translateY(-7px);
+}
+
+.milestone-icon {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.milestone:hover .milestone-icon {
+  background: #B0002A;
+  color: white;
+  border-color: #E31B45;
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px #B0002A35;
+}
+
+.milestone-click {
+  display: inline-block;
+  font-size: 11px;
+  color: #B0002A;
+  margin-top: 8px;
+  font-weight: 600;
+  opacity: 0;
+  transition: .3s;
+}
+
+.milestone:hover .milestone-click {
+  opacity: 1;
+}
+
+/* POPUP */
+
+.journey-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(45, 0, 13, .78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn .3s ease;
+}
+
+.journey-popup {
+  position: relative;
+  background: linear-gradient(145deg, #FFF5F7, #FFE5EB);
+  width: 100%;
+  max-width: 450px;
+  padding: 45px 32px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 60px #0004;
+  animation: popupIn .35s ease;
+}
+
+.journey-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #F9D7E0;
+  color: #97001F;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.journey-popup-emoji {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.journey-popup h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 43px;
+  font-weight: 400;
+  color: #97001F;
+  margin: 15px 0 5px;
+}
+
+.journey-popup h4 {
+  color: #B0002A;
+  font-size: 14px;
+}
+
+.popup-heart-divider {
+  color: #D4143D;
+  margin: 20px 0;
+}
+
+.journey-popup p {
+  color: #70404C;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.journey-popup-signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #B0002A;
+  margin: 20px 0;
+}
+
+.journey-popup .primary-btn {
+  margin: 20px auto 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .journey-content {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .you-me {
+    border-left: none;
+    border-top: 1px solid #D94B6A;
+    padding: 25px 0 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    gap: 25px 10px;
+  }
+
+  .milestone {
+    padding: 10px 5px;
+  }
+
+  .milestone h3 {
+    font-size: 16px;
+  }
+
+  .milestone h4 {
+    font-size: 14px;
+  }
+
+  .milestone p {
+    font-size: 12px;
+  }
+
+  .milestone-click {
+    opacity: 1;
+  }
+
+  .journey-popup {
+    padding: 40px 22px;
+  }
+
+  .journey-popup h2 {
+    font-size: 37px;
+  }
+}
+
+
+/* DARK RED ROMANTIC THEME */
+
+:root {
+  --dark: #3B0714;
+  --wine: #650D25;
+  --burgundy: #8B102E;
+  --red: #B51238;
+  --bright-red: #D9274F;
+  --light-red: #F5D5DD;
+  --soft-bg: #FFF0F2;
+}
+
+/* MAIN BACKGROUND */
+
+body,
+.site {
+  background: #FFF0F2;
+  color: var(--dark);
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: rgba(75, 5, 23, .97);
+  border-bottom: 1px solid #8B102E;
+}
+
+.brand {
+  color: #FFF0F2;
+}
+
+.nav-links a {
+  color: #FFE3E9;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #FF5278;
+  border-color: #FF5278;
+}
+
+.nav-heart,
+.brand-heart {
+  color: #FF5278 !important;
+}
+
+/* HERO */
+
+.hero {
+  background: radial-gradient(
+    ellipse at 20% 35%,
+    #FFF0F2 0,
+    #F8D5DE 48%,
+    #E9A9B9 100%
+  );
+}
+
+.hero h1 {
+  color: #4B0719;
+}
+
+.hero h1 em,
+.hero h2,
+.big-heart {
+  color: #B51238;
+}
+
+.eyebrow,
+.tiny-label {
+  color: #8B102E;
+}
+
+.hero-copy > p {
+  color: #5B1428;
+}
+
+.hero-copy > p span {
+  color: #B51238;
+}
+
+.primary-btn {
+  background: linear-gradient(
+    135deg,
+    #D9274F,
+    #8B102E,
+    #4B0719
+  );
+  box-shadow: 0 8px 20px #8B102E45;
+}
+
+.primary-btn:hover {
+  box-shadow: 0 12px 25px #650D2560;
+}
+
+/* JOURNEY */
+
+.journey {
+  background: #FFF0F2;
+}
+
+.section-heading {
+  color: #B51238;
+}
+
+.section-heading > span {
+  background: #B51238;
+}
+
+.section-heading h2,
+.you-me h3 {
+  color: #650D25;
+}
+
+.timeline-line {
+  background: #C44A68;
+}
+
+.milestone-icon {
+  background: #F3C3D0;
+  color: #650D25;
+}
+
+.milestone h3,
+.milestone h4 {
+  color: #650D25;
+}
+
+.milestone p {
+  color: #75404E;
+}
+
+.milestone:hover {
+  background: #F8D5DE;
+}
+
+.milestone:hover .milestone-icon {
+  background: #650D25;
+  color: white;
+  border-color: #D9274F;
+}
+
+.milestone-click {
+  color: #B51238;
+}
+
+.you-me {
+  border-color: #B51238;
+}
+
+.love-line,
+.you-me p span {
+  color: #B51238;
+}
+
+/* PROMISES */
+
+.promises {
+  background: linear-gradient(
+    145deg,
+    #F7D9E0,
+    #FCE9ED,
+    #EFBAC8
+  );
+}
+
+.promise-card {
+  background: #FFF8F9;
+  border-color: #E7B1BF;
+  color: #650D25;
+}
+
+.promise-card:hover {
+  background: #FFE8ED;
+  border-color: #B51238;
+  box-shadow: 0 12px 30px #8B102E35;
+}
+
+.promise-card h3 {
+  color: #650D25;
+}
+
+.promise-card p {
+  color: #75404E;
+}
+
+.promise-card span {
+  color: #B51238;
+}
+
+/* PROMISE POPUP */
+
+.popup-overlay {
+  background: rgba(40, 0, 12, .85);
+}
+
+.promise-popup {
+  background: linear-gradient(
+    145deg,
+    #FFF0F3,
+    #F5CDD8
+  );
+}
+
+.popup-close {
+  background: #F3D0DA;
+  color: #650D25;
+}
+
+.promise-popup h2,
+.popup-signature {
+  color: #8B102E;
+}
+
+.promise-note {
+  color: #653444;
+}
+
+/* MEMORIES */
+
+.memories {
+  background: linear-gradient(
+    145deg,
+    #8B102E,
+    #650D25 60%,
+    #3B0714
+  );
+}
+
+.memory-copy h2 {
+  color: #FFF0F2;
+}
+
+.memory-copy h2 span {
+  color: #FF6688;
+}
+
+.memory-copy > p {
+  color: #FFE0E7;
+}
+
+.memory-copy .tiny-label {
+  color: #FFB5C6;
+}
+
+.underline {
+  background: #FF6688;
+}
+
+.text-link {
+  color: #FF9BB2;
+}
+
+.heart-photo {
+  background: #FFF0F2;
+}
+
+/* ROMANTIC DARE */
+
+.dare-section {
+  background: #FFF0F2;
+}
+
+.dare-card {
+  background: linear-gradient(
+    145deg,
+    #F8D5DE,
+    #FFF0F3
+  );
+  border-color: #D99AA9;
+  box-shadow: 0 15px 40px #8B102E25;
+}
+
+.dare-subtitle,
+.journey-subtitle {
+  color: #75404E;
+}
+
+/* JOURNEY POPUP */
+
+.journey-popup-overlay {
+  background: rgba(40, 0, 12, .88);
+}
+
+.journey-popup {
+  background: linear-gradient(
+    145deg,
+    #FFF0F3,
+    #F2C5D1
+  );
+}
+
+.journey-popup-close {
+  background: #EFC3CF;
+  color: #650D25;
+}
+
+.journey-popup h2,
+.journey-popup h4,
+.journey-popup-signature {
+  color: #8B102E;
+}
+
+.journey-popup p {
+  color: #653444;
+}
+
+.popup-heart-divider {
+  color: #B51238;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+  color: #B51238;
+}
+
+.rose-decoration {
+  filter: drop-shadow(0 5px 8px #650D2540);
+}
+
+/* RESPONSIVE BORDER */
+
+@media (max-width: 900px) {
+  .you-me {
+    border-top: 1px solid #B51238;
+  }
+}
+

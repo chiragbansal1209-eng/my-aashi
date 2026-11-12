@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe0ec, #e8d5ff, #ffdce5);
+  text-align: center;
+  padding: 35px 15px;
+  overflow: hidden;
+  color: #a12d60;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.subtitle {
+  color: #9b4770;
+  font-size: 16px;
+}
+
+.hearts {
+  font-size: 28px;
+  animation: float 2s infinite alternate;
+}
+
+.heart-container {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  margin: 35px auto 15px;
+}
+
+.balloon-wrapper {
+  position: absolute;
+  width: 105px;
+  min-height: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.balloon {
+  cursor: pointer;
+  font-size: 75px;
+  position: relative;
+  animation: float 1.8s infinite alternate;
+  transition: 0.3s;
+  filter: drop-shadow(0 5px 5px #d65d8990);
+}
+
+.balloon:hover {
+  transform: scale(1.15);
+}
+
+.balloon-label {
+  display: block;
+  font-size: 11px;
+  color: #a12d60;
+  margin-top: -8px;
+}
+
+.gift {
+  animation: reveal 0.7s ease-out;
+  width: 130px;
+  margin-left: -12px;
+}
+
+.gift-emoji {
+  font-size: 45px;
+}
+
+.gift h3 {
+  margin: 3px;
+  color: #d63384;
+}
+
+.gift p {
+  font-size: 11px;
+  color: #82405d;
+}
+
+.pop {
+  font-size: 20px;
+  animation: pop 0.5s ease;
+}
+
+.counter {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.final-message {
+  animation: reveal 1s ease;
+  background: #ffffffa8;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 25px auto;
+}
+
+.final-message h1 {
+  color: #e11d74;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 400px) {
+  .heart-container {
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin-bottom: -35px;
+  }
+}
