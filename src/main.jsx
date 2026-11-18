@@ -23,6 +23,7 @@ import './style.css';
 import MemoriesGallery from './MemoriesGallery';
 import BirthdayCard from './BirthdayCard';
 import BallonsCard from './BallonsCard';
+import ProposalDay from './ProposalDay';
 
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -465,6 +466,7 @@ function App() {
     <MemoriesGallery />
     <BirthdayCard />
     <BallonsCard/>
+    <ProposalDay/>
 
 
         {/* PROMISE SECTION */}
